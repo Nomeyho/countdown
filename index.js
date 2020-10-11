@@ -4,8 +4,8 @@ const drawTen = () => {
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     line.setAttribute('x1', '150');
     line.setAttribute('x2', '150');
-    line.setAttribute('y1', '200');
-    line.setAttribute('y2', '300');
+    line.setAttribute('y1', '175');
+    line.setAttribute('y2', '325');
     line.style.stroke = '#000';
     line.style.strokeWidth = '5px';
     svg.appendChild(line);
@@ -44,17 +44,17 @@ const drawHeight = () => {
 
 const drawSeven = () => {
     const upperLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    upperLine.setAttribute('x1', '100');
+    upperLine.setAttribute('x1', '75');
     upperLine.setAttribute('x2', '150');
-    upperLine.setAttribute('y1', '200');
-    upperLine.setAttribute('y2', '200');
+    upperLine.setAttribute('y1', '175');
+    upperLine.setAttribute('y2', '175');
     upperLine.style.stroke = 'green';
     upperLine.style.strokeWidth = '5px';
     svg.appendChild(upperLine);
 
     const lowerLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    lowerLine.setAttribute('x1', '125');
-    lowerLine.setAttribute('x2', '175');
+    lowerLine.setAttribute('x1', '100');
+    lowerLine.setAttribute('x2', '200');
     lowerLine.setAttribute('y1', '250');
     lowerLine.setAttribute('y2', '250');
     lowerLine.style.stroke = 'green';
@@ -73,7 +73,7 @@ const drawSix = () => {
 
 const drawFive = () => {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('d', 'M150,300 A 25 25 0 0 1 150 350');
+    path.setAttribute('d', 'M150,325 A 50 50 0 0 1 150 425');
     path.style.stroke = 'orange';
     path.style.fill = 'none';
     path.style.strokeWidth = '5px';
@@ -82,10 +82,10 @@ const drawFive = () => {
 
 const drawFour = () => {
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line.setAttribute('x1', '125');
+    line.setAttribute('x1', '100');
     line.setAttribute('x2', '150');
     line.setAttribute('y1', '250');
-    line.setAttribute('y2', '200');
+    line.setAttribute('y2', '175');
     line.style.stroke = 'aqua';
     line.style.strokeWidth = '5px';
     svg.appendChild(line);
@@ -93,7 +93,7 @@ const drawFour = () => {
 
 const drawThree = () => {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('d', 'M150,250 A 25 25 0 0 1 150 300');
+    path.setAttribute('d', 'M150,225 A 50 50 0 0 1 150 325');
     path.style.stroke = 'brown';
     path.style.fill = 'none';
     path.style.strokeWidth = '5px';
@@ -102,7 +102,7 @@ const drawThree = () => {
 
 const drawTwo = () => {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('d', 'M100,150 A 50 25 0 0 1 100 200');
+    path.setAttribute('d', 'M75,100 a50 50 0 0 1 75 75');
     path.style.stroke = 'lime';
     path.style.fill = 'none';
     path.style.strokeWidth = '5px';
@@ -131,7 +131,7 @@ const drawOne = () => {
 
 const drawZero = () => {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('d', 'M150,350 A 25 25 0 0 1 150 300');
+    path.setAttribute('d', 'M150,325 A 50 50 0 0 0 150 425');
     path.style.stroke = 'yellow';
     path.style.fill = 'none';
     path.style.strokeWidth = '5px';
