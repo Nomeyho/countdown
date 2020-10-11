@@ -4,3 +4,20 @@ svg {
     height: 500px;
     border: 1px solid black;
 }
+
+path, line, circle {
+    fill: none;
+    stroke: gray;
+    stroke-width: 10px;
+    stroke-linecap: round;
+
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 1s linear forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
