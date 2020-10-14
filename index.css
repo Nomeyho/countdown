@@ -1,16 +1,16 @@
-svg {
+#countdown {
     margin: 50px;
     width: 500px;
     height: 500px;
     border: 1px solid black;
 }
 
-path, line, circle {
+#countdown .digit {
     fill: none;
-    stroke: gray;
+    stroke: blue;
     stroke-width: 10px;
     stroke-linecap: round;
-
+    /* Drawing animation */
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 1s linear forwards;
@@ -21,3 +21,18 @@ path, line, circle {
         stroke-dashoffset: 0;
     }
 }
+
+#countdown .disabled {
+    stroke: gray !important;
+}
+
+#countdown .one { stroke: #B59AF8 }
+#countdown .two { stroke: #B59AF8 }
+#countdown .three { stroke: #B59AF8 }
+#countdown .four { stroke: #B59AF8 }
+#countdown .five { stroke: #B59AF8 }
+#countdown .six { stroke: #B59AF8 }
+#countdown .seven { stroke: #B59AF8 }
+#countdown .eight { stroke: #B59AF8 }
+#countdown .nine { stroke: #B59AF8 }
+#countdown .ten { stroke: #B59AF8 }
