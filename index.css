@@ -7,7 +7,7 @@
 
 #countdown .digit {
     fill: none;
-    stroke: blue;
+    stroke: #888FF7;
     stroke-width: 10px;
     stroke-linecap: round;
     /* Drawing animation */
@@ -23,16 +23,6 @@
 }
 
 #countdown .disabled {
-    stroke: gray !important;
+    opacity: 0.3;
+    transition: opacity ease-out 0.9s;
 }
-
-#countdown .one { stroke: #B59AF8 }
-#countdown .two { stroke: #B59AF8 }
-#countdown .three { stroke: #B59AF8 }
-#countdown .four { stroke: #B59AF8 }
-#countdown .five { stroke: #B59AF8 }
-#countdown .six { stroke: #B59AF8 }
-#countdown .seven { stroke: #B59AF8 }
-#countdown .eight { stroke: #B59AF8 }
-#countdown .nine { stroke: #B59AF8 }
-#countdown .ten { stroke: #B59AF8 }
