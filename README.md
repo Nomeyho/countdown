@@ -1,7 +1,7 @@
 TODO:
 - readme
 - rollup
-- CI/CD
+- CI/CD (linter, npm package)
 - demo page
 - vuejs
 - reactjs
