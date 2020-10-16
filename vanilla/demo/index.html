@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Countdown</title>
+    <link rel="stylesheet" href="../src/index.css">
+  </head>
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      background: black;
+      flex: 1;
+      align-items: center;
+      align-content: center;
+    }
+
+    #svg {
+      flex: 1;
+      margin: 0 auto;
+      border: 1px solid white;
+    }
+
+    .digit {
+        fill: none;
+        stroke: #888FF7;
+        stroke-width: 10px;
+        stroke-linecap: round;
+        /* Drawing animation */
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 1s linear forwards;
+    }
+
+    @keyframes dash {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .disabled-digit {
+        opacity: 0.3;
+        transition: opacity ease-out 0.9s;
+    }
+  </style>
+  <body>
+    <svg id="svg" width="500" height="500"></svg>
+    <script src="../build/countdown.js"></script>
+    <script>
+      const svg = document.getElementById('svg');
+      countdown(svg);
+    </script>
+  </body>
+</html>

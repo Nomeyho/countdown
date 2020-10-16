@@ -5,24 +5,3 @@
     border: 1px solid black;
 }
 
-#countdown .digit {
-    fill: none;
-    stroke: #888FF7;
-    stroke-width: 10px;
-    stroke-linecap: round;
-    /* Drawing animation */
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 1s linear forwards;
-}
-
-@keyframes dash {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-#countdown .disabled {
-    opacity: 0.3;
-    transition: opacity ease-out 0.9s;
-}

@@ -1,3 +1,4 @@
+import { drawCircle, drawLine, drawPath } from './utils';
 
 const drawTen = (svg) => {
     drawLine(svg, 150, 150, 175, 250, 'digit ten seven four');
@@ -59,7 +60,17 @@ const drawZero = (svg) => {
     disable(svg, 'zero');
 }
 
-const draw = (svg, i) => {
+const disable = (svg, exceptClass) => {
+    for(let el of svg.getElementsByClassName('digit')) {
+        if(el.classList.contains(exceptClass)) {
+            el.classList.remove('disabled-digit');
+        } else {
+            el.classList.add('disabled-digit');
+        }
+    }
+}
+
+export const draw = (svg, i) => {
     switch(i) {
         case 10: drawTen(svg); break;
         case 9: drawNine(svg); break;
@@ -73,15 +84,5 @@ const draw = (svg, i) => {
         case 1: drawOne(svg); break;
         case 0: drawZero(svg); break;
         default: console.warn(`Unexpected draw: ${i}`);
-    }
-}
-
-const disable = (svg, exceptClass) => {
-    for(let el of svg.getElementsByClassName('digit')) {
-        if(el.classList.contains(exceptClass)) {
-            el.classList.remove('disabled');
-        } else {
-            el.classList.add('disabled');
-        }
     }
 }
