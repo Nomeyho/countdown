@@ -3,6 +3,14 @@ var countdown = (function () {
 
     const sleep = async (delay) => new Promise(r => setTimeout(r, delay));
 
+    const createSvg = (width, height) => {
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('width', `${width}px`);
+        svg.setAttribute('height', `${height}px`);
+        svg.setAttribute('viewBox', '0 0 500 500');
+        return svg;
+    };
+
     const drawPath = (svg, d, classes) => {
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.setAttribute('d', d);
@@ -116,11 +124,22 @@ var countdown = (function () {
         }
     };
 
-    var countdown = async (svg) => {
+    var countdown = async (container, {
+        width = 300,
+        height = 300,
+        onDraw,
+        onDrawEnd
+    } = {}) => {
+        const svg = createSvg(width, height);
+        container.appendChild(svg);
+
         for (let i = 10; i >= 0; i--) {
             draw(svg, i);
+            if (onDraw) onDraw(i);
             await sleep(1000);
         }
+
+        if (onDrawEnd) onDrawEnd(i);
     };
 
     return countdown;

@@ -1,6 +1,14 @@
 
 export const sleep = async (delay) => new Promise(r => setTimeout(r, delay));
 
+export const createSvg = (width, height) => {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', `${width}px`);
+    svg.setAttribute('height', `${height}px`);
+    svg.setAttribute('viewBox', '0 0 500 500');
+    return svg;
+}
+
 export const drawPath = (svg, d, classes) => {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', d);

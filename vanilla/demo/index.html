@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Countdown</title>
-    <link rel="stylesheet" href="../src/index.css">
   </head>
   <style>
     body {
@@ -14,7 +13,9 @@
       justify-content: center;
     }
 
-    #svg {
+    #countdown {
+      width: 500px;
+      height: 500px;
       border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
@@ -41,10 +42,10 @@
     }
   </style>
   <body>
-    <svg id="svg" width="500" height="500"></svg>
+    <div id="countdown"></div>
     <script src="../build/countdown.js"></script>
     <script>
-      const svg = document.getElementById('svg');
+      const svg = document.getElementById('countdown');
       countdown(svg);
     </script>
   </body>
