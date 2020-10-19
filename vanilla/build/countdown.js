@@ -152,6 +152,7 @@ var countdown = (function () {
     };
 
     var countdown = async (container, {
+        start = 10,
         width = 500,
         height = 500,
         color = '#888FF7',
@@ -164,7 +165,7 @@ var countdown = (function () {
         const style = createStyleSheet(color, strokeWidth);
         document.body.appendChild(style);
 
-        for (let i = 10; i >= 0; i--) {
+        for (let i = start; i >= 0; i--) {
             draw(svg, i);
             if (onDraw) onDraw(i);
             await sleep(1000);

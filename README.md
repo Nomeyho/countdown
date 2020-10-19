@@ -7,12 +7,15 @@ TODO - Live demo link
 ## JavaScript
 
 ### Install
+```
+npm install @nomeyho/countdown
+```
 
 ### Usage
 Import `countdown.js` and call `countdown(...);` with 
 a reference to the parent element as first argument.
 
-```
+```html
 <body>
     <div id="container"></div>
     <script src="countdown.js"></script>
@@ -24,7 +27,7 @@ a reference to the parent element as first argument.
 ```
 
 ### Options
-```
+```javascript
 countdown(container, {
     width = 500,
     height = 500,

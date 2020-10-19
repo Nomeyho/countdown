@@ -1,8 +1,8 @@
 {
-  "name": "countdown",
+  "name": "@nomeyho/countdown",
   "version": "1.0.0",
   "description": "An SVG countdown animation",
-  "main": "index.js",
+  "main": "none",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,13 +17,14 @@
     "javascript",
     "animation"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Nomeyho",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Nomeyho/countdown/issues"
   },
   "homepage": "https://github.com/Nomeyho/countdown#readme",
   "devDependencies": {
     "rollup": "^2.31.0"
-  }
+  },
+  "dependencies": {}
 }
