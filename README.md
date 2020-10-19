@@ -35,10 +35,12 @@ countdown(container, {
 ```
 | Option | Description | Default |
 |---|---|---|
-| width  | The canvas's width in pixels | 500 |
-| height  | The canva's height in pixels | 500 | 
-| color | The digit's color | '#888FF7' |
-| strokeWidth | The digit's stroke width | '10px' |
+| start | The countdown start value (between 10 and 0) | `10` |
+| width | The canvas's width in pixels | `500` |
+| height | The canva's height in pixels | `500` | 
+| color | The digit's color | `'#888FF7'` |
+| strokeWidth | The digit's stroke width | `'10px'` |
+| onDraw | A callback function called after each digit draw | `undefined` |
 
 TODO:
 - readme (icons!)
