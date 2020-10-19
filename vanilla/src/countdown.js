@@ -1,7 +1,8 @@
 import { draw } from './draw';
-import {createSvg, sleep } from './utils';
+import {createSvg } from './utils';
 
-export default async (container, {
+export default (container, {
+    start = 10,
     width = 500,
     height = 500,
     onDraw,
@@ -10,11 +11,16 @@ export default async (container, {
     const svg = createSvg(width, height);
     container.appendChild(svg);
 
-    for (let i = 10; i >= 0; i--) {
-        draw(svg, i);
-        if (onDraw) onDraw(i);
-        await sleep(1000);
-    }
+    countdownRecursive(svg, start, onDraw, onDrawEnd);
+}
 
-    if (onDrawEnd) onDrawEnd(i);
+const countdownRecursive = (svg, i, onDraw, onDrawEnd) => {
+    draw(svg, i);
+    if (onDraw) onDraw(i);
+
+    if (i > 0) {
+        setTimeout(() => countdownRecursive(svg, i - 1, onDraw, onDrawEnd), 1000);
+    } else {
+        if(onDrawEnd) onDrawEnd(i);
+    }
 }

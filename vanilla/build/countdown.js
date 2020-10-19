@@ -1,8 +1,6 @@
 var countdown = (function () {
     'use strict';
 
-    const sleep = async (delay) => new Promise(r => setTimeout(r, delay));
-
     const createSvg = (width, height) => {
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svg.setAttribute('width', `${width}px`);
@@ -124,22 +122,27 @@ var countdown = (function () {
         }
     };
 
-    var countdown = async (container, {
-        width = 300,
-        height = 300,
+    var countdown = (container, {
+        width = 500,
+        height = 500,
         onDraw,
         onDrawEnd
     } = {}) => {
         const svg = createSvg(width, height);
         container.appendChild(svg);
 
-        for (let i = 10; i >= 0; i--) {
-            draw(svg, i);
-            if (onDraw) onDraw(i);
-            await sleep(1000);
-        }
+        countdownRecursive(svg, 10, onDraw, onDrawEnd);
+    };
 
-        if (onDrawEnd) onDrawEnd(i);
+    const countdownRecursive = (svg, i, onDraw, onDrawEnd) => {
+        draw(svg, i);
+        if (onDraw) onDraw(i);
+
+        if (i > 0) {
+            setTimeout(() => countdownRecursive(svg, i - 1, onDraw, onDrawEnd), 1000);
+        } else {
+            if(onDrawEnd) onDrawEnd(i);
+        }
     };
 
     return countdown;
