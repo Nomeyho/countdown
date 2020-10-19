@@ -9,6 +9,33 @@ export const createSvg = (width, height) => {
     return svg;
 }
 
+export const createStyleSheet = (color, strokeWidth) => {
+    const style = document.createElement('style');
+    style.innerHTML = `
+    .digit {
+        fill: none;
+        stroke: ${color};
+        stroke-width: ${strokeWidth};
+        stroke-linecap: round;
+        /* Drawing animation */
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 1s linear forwards;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .disabled-digit {
+        opacity: 0.3;
+        transition: opacity ease-out 1s;
+    }`;
+    return style;
+}
+
 export const drawPath = (svg, d, classes) => {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', d);
