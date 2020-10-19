@@ -8,5 +8,6 @@
 ## Publish
 ```
 npm login
+npm run prettier
 npm publish --access public
 ````

@@ -1,5 +1,9 @@
 # SVG Countdown
-> An SVG countdown component (JS, VueJS or React).
+> An SVG countdown component (JS, Vue or React).
+
+* [for JavaScript](#JavaScript)
+* [for Vue](#Vue)
+* [for React](#React)
 
 ## Demo
 TODO - Live demo link
@@ -45,7 +49,13 @@ countdown(container, {
 | strokeWidth | The digit's stroke width | `'10px'` |
 | onDraw | A callback function called after each digit draw | `undefined` |
 
-TODO:
+## Vue
+TODO
+
+## React
+TODO
+
+## TODO
 - readme (icons!)
 - CI/CD (linter, npm package)
 - demo page
