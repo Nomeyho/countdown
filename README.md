@@ -9,7 +9,7 @@
 [Live demo](https://nomeyho.github.io/countdown/)
 
 <p align="center">
-    <img src="../docs/video.gif" width="300">
+    <img src="docs/video.gif" width="300">
 </p>
 
 ## JavaScript
@@ -41,7 +41,7 @@ countdown(container, {
     height = 500,
     color = '#888FF7',
     strokeWidth = '10px',
-    onDraw = () => console.log(`Drawing ${i}`),
+    onDraw = (i) => console.log(`Drawing ${i}`),
 });
 ```
 | Option | Description | Default |
@@ -60,7 +60,6 @@ TODO
 TODO
 
 ## TODO
-- readme (icons!)
 - CI/CD (linter, npm package)
 - demo page
 - vuejs
