@@ -1,4 +1,4 @@
-# SVG Countdown
+# Countdown
 > An SVG countdown component (JS, Vue or React).
 
 * [for JavaScript](#JavaScript)
