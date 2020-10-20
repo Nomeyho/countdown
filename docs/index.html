@@ -25,8 +25,10 @@
     <script src="../vanilla/build/countdown.js"></script>
     <script>
       window.onload = () => {
-        const container = document.getElementById('container');
-        countdown(container);
+        setTimeout(() => {
+          const container = document.getElementById('container');
+          countdown(container);
+        }, 3000);
       };
     </script>
   </body>

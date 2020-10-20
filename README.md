@@ -6,7 +6,11 @@
 * [for React](#React)
 
 ## Demo
-TODO - Live demo link
+[Live demo](https://nomeyho.github.io/countdown/)
+
+<p align="center">
+    <img src="../docs/video.gif" width="300">
+</p>
 
 ## JavaScript
 
