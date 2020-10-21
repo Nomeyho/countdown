@@ -1,9 +1,5 @@
 # Countdown
-> An SVG countdown component (JS, Vue or React).
-
-* [for JavaScript](#JavaScript)
-* [for Vue](#Vue)
-* [for React](#React)
+> An SVG countdown component for the Web.
 
 ## Demo
 [Live demo](https://nomeyho.github.io/countdown/)
@@ -12,14 +8,12 @@
     <img src="docs/video.gif" width="300">
 </p>
 
-## JavaScript
-
-### Install
+## Install
 ```
 npm install @nomeyho/countdown
 ```
 
-### Usage
+## Usage
 Import `countdown.js` and call `countdown(...);` with 
 a reference to the parent element as first argument.
 
@@ -34,7 +28,7 @@ a reference to the parent element as first argument.
 </body>
 ```
 
-### Options
+## Options
 ```javascript
 countdown(container, {
     width = 500,
@@ -52,15 +46,3 @@ countdown(container, {
 | color | The digit's color | `'#888FF7'` |
 | strokeWidth | The digit's stroke width | `'10px'` |
 | onDraw | A callback function called after each digit draw | `undefined` |
-
-## Vue
-TODO
-
-## React
-TODO
-
-## TODO
-- CI/CD (linter, npm package)
-- demo page
-- vuejs
-- reactjs
